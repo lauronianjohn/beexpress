@@ -546,7 +546,7 @@ class HomeController extends Controller
             purchaseKey: $request['purchase_key'],
             softwareType: $request->get('software_type', base64_decode('cHJvZHVjdA=='))
         );
-        dd($response);
+        // dd($response);
         $this->updateActivationConfig(app: 'admin_panel', response: $response);
         return redirect(url('/'));
     }
